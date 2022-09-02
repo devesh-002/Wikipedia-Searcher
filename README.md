@@ -31,3 +31,10 @@ python3 split.py ```final_folder``` ```merged_index``` ```secondary_file```
 python3 search.py ```query_file```
 This will output results in a query_op.txt in the same directory.
 
+A collection of queries to run the code, run them one by one. Note that in search.py it will search in a folder named **final1** and titles in a folder named title so please change them before running final search or run them as below. Just keep a queries.txt in same directory and add path of data dump before running code and it will work
+```
+bash index.sh <path_to_data_dump> final1 stats.txt
+python3 merging.py final1
+python3 split.py final1 final1/file0.txt final1/secondary.txt
+python3 search.py queries.txt
+```
